@@ -1,4 +1,4 @@
-const ALLOWED_SCOPES = {
+﻿const ALLOWED_SCOPES = {
   world: 'content/world',
   game: 'content/game',
   scenarios: 'content/scenarios',
@@ -121,7 +121,7 @@ function scoreItem(item, query, terms, scopeFilter) {
   const title = String(item.title || '').toLowerCase();
   const relPath = String(item.path || '').toLowerCase();
   const excerpt = String(item.excerpt || '').toLowerCase();
-  const searchable = String(item.searchable || '').toLowerCase();
+  const searchable = String(item.searchable || item.searchText || item.headingsText || '').toLowerCase();
 
   if (title.includes(query)) score += 120;
   if (relPath.includes(query)) score += 100;
