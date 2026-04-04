@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elaris Lore API</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f0e8;
+        --panel: #fffaf3;
+        --ink: #2b2118;
+        --accent: #8f5b2e;
+        --line: #dccab4;
+      }
+      body {
+        margin: 0;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+        background: linear-gradient(180deg, #f8f4ed 0%, var(--bg) 100%);
+        color: var(--ink);
+      }
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 24px;
+        box-shadow: 0 10px 28px rgba(43, 33, 24, 0.06);
+      }
+      h1, h2 {
+        margin-top: 0;
+      }
+      a {
+        color: var(--accent);
+      }
+      code {
+        background: #f0e4d5;
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+      ul {
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="panel">
+        <h1>Elaris Lore API</h1>
+        <p>這個部署是給 ChatGPT 自訂 GPT Actions 使用的 Elaris 世界資料查詢 API。</p>
+
+        <h2>可直接測試的入口</h2>
+        <ul>
+          <li><a href="/openapi.json">/openapi.json</a></li>
+          <li><a href="/api/lore/search?q=%E8%AB%BE%E9%AD%AF%E5%9B%A0%E4%BA%BA&scope=world">/api/lore/search?q=諾魯因人&amp;scope=world</a></li>
+          <li><a href="/api/lore/document?path=content/world/05-races/noruin-lineage.md">/api/lore/document?path=content/world/05-races/noruin-lineage.md</a></li>
+        </ul>
+
+        <h2>使用順序</h2>
+        <ul>
+          <li>先用 <code>/api/lore/search</code> 找文件</li>
+          <li>再用 <code>/api/lore/document</code> 讀全文</li>
+          <li><code>/api/fetch</code> 是舊版相容端點</li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

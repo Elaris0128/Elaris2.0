@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://your-elaris-vercel-url.vercel.app",
+      "url": "https://elaris2-0.vercel.app",
       "description": "請改成你實際部署 Elaris API 的網址。"
     }
   ],
