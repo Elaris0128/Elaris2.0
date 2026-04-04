@@ -160,7 +160,30 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "type": "object",
+                  "properties": {
+                    "deprecated": { "type": "boolean" },
+                    "note": { "type": "string" },
+                    "id": { "type": "string" },
+                    "path": { "type": "string" },
+                    "scope": { "type": "string" },
+                    "title": { "type": "string" },
+                    "excerpt": { "type": "string" },
+                    "headings": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "level": { "type": "integer" },
+                          "text": { "type": "string" }
+                        },
+                        "required": ["level", "text"]
+                      }
+                    },
+                    "content": { "type": "string" },
+                    "wordCount": { "type": "integer" }
+                  },
+                  "required": ["deprecated", "note", "id", "path", "scope", "title", "excerpt", "headings", "content", "wordCount"]
                 }
               }
             }
