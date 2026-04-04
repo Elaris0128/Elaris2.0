@@ -1,8 +1,3 @@
-﻿import fs from 'fs/promises';
-import path from 'path';
-
-const PROJECT_ROOT = process.cwd();
-
 const ALLOWED_SCOPES = {
   world: 'content/world',
   game: 'content/game',
@@ -11,14 +6,10 @@ const ALLOWED_SCOPES = {
 };
 
 const ALLOWED_EXTENSIONS = new Set(['.md', '.json', '.txt']);
-const MANIFEST_SEARCH_SLICE = 5000;
-const MANIFEST_EXCERPT_LENGTH = 220;
+const RAW_REPO_BASE = 'https://raw.githubusercontent.com/Elaris0128/Elaris2.0/main/';
+const MANIFEST_URL = `${RAW_REPO_BASE}data/lore-index.json`;
 
 let manifestPromise;
-
-function toAbsolute(relPath) {
-  return path.join(PROJECT_ROOT, relPath);
-}
 
 function normalizeText(input) {
   return String(input || '')
@@ -39,20 +30,21 @@ function extractTitle(content, relPath) {
   if (headingMatch) {
     return headingMatch[1].trim();
   }
-  return path.basename(relPath, path.extname(relPath));
+  const pieces = String(relPath || '').replace(/\\/g, '/').split('/');
+  const filename = pieces[pieces.length - 1] || relPath;
+  return filename.replace(/\.[^.]+$/, '');
 }
 
 function extractExcerpt(content) {
-  const plain = String(content || '')
+  return String(content || '')
     .replace(/\r/g, '')
     .replace(/```[\s\S]*?```/g, ' ')
     .replace(/^#+\s+/gm, '')
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
     .replace(/!\[[^\]]*\]\([^)]+\)/g, ' ')
     .replace(/\s+/g, ' ')
-    .trim();
-
-  return plain.slice(0, MANIFEST_EXCERPT_LENGTH);
+    .trim()
+    .slice(0, 220);
 }
 
 function extractHeadings(content) {
@@ -64,71 +56,20 @@ function extractHeadings(content) {
     }));
 }
 
-async function walkMarkdownFiles(absDir, relDir) {
-  const dirEntries = await fs.readdir(absDir, { withFileTypes: true });
-  const files = [];
-
-  for (const entry of dirEntries) {
-    const childAbs = path.join(absDir, entry.name);
-    const childRel = path.posix.join(relDir.replace(/\\/g, '/'), entry.name);
-
-    if (entry.isDirectory()) {
-      files.push(...(await walkMarkdownFiles(childAbs, childRel)));
-      continue;
-    }
-
-    if (entry.isFile() && ALLOWED_EXTENSIONS.has(path.extname(entry.name).toLowerCase())) {
-      files.push(childRel);
-    }
+async function fetchJson(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch JSON: ${response.status}`);
   }
-
-  return files;
+  return response.json();
 }
 
-async function buildManifest() {
-  const items = [];
-
-  for (const [scope, relRoot] of Object.entries(ALLOWED_SCOPES)) {
-    const absRoot = toAbsolute(relRoot);
-
-    let files = [];
-    try {
-      files = await walkMarkdownFiles(absRoot, relRoot);
-    } catch {
-      continue;
-    }
-
-    for (const relPath of files) {
-      try {
-        const content = await fs.readFile(toAbsolute(relPath), 'utf8');
-        const title = extractTitle(content, relPath);
-        const excerpt = extractExcerpt(content);
-        const searchable = normalizeText(
-          [relPath, title, excerpt, content.slice(0, MANIFEST_SEARCH_SLICE)].join(' ')
-        );
-
-        items.push({
-          id: relPath.replace(/[\\/]/g, '__').replace(/\.[^.]+$/, ''),
-          scope,
-          path: relPath.replace(/\\/g, '/'),
-          title,
-          excerpt,
-          searchable,
-        });
-      } catch {
-        // Ignore unreadable files.
-      }
-    }
+async function fetchText(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch text: ${response.status}`);
   }
-
-  return items;
-}
-
-export async function getManifest() {
-  if (!manifestPromise) {
-    manifestPromise = buildManifest();
-  }
-  return manifestPromise;
+  return response.text();
 }
 
 export function listScopes() {
@@ -156,35 +97,19 @@ export function sanitizePath(inputPath) {
     return null;
   }
 
-  const ext = path.extname(normalized).toLowerCase();
-  if (!ALLOWED_EXTENSIONS.has(ext)) {
+  const extension = normalized.includes('.') ? `.${normalized.split('.').pop().toLowerCase()}` : '';
+  if (!ALLOWED_EXTENSIONS.has(extension)) {
     return null;
   }
 
   return normalized;
 }
 
-export async function readDocumentByPath(inputPath) {
-  const safePath = sanitizePath(inputPath);
-  if (!safePath) {
-    return null;
+export async function getManifest() {
+  if (!manifestPromise) {
+    manifestPromise = fetchJson(MANIFEST_URL);
   }
-
-  const content = await fs.readFile(toAbsolute(safePath), 'utf8');
-  const title = extractTitle(content, safePath);
-  const excerpt = extractExcerpt(content);
-  const headings = extractHeadings(content);
-
-  return {
-    id: safePath.replace(/[\\/]/g, '__').replace(/\.[^.]+$/, ''),
-    path: safePath,
-    scope: resolveScope(safePath),
-    title,
-    excerpt,
-    headings,
-    content,
-    wordCount: normalizeText(content).split(/\s+/).filter(Boolean).length,
-  };
+  return manifestPromise;
 }
 
 function scoreItem(item, query, terms, scopeFilter) {
@@ -193,9 +118,10 @@ function scoreItem(item, query, terms, scopeFilter) {
   }
 
   let score = 0;
-  const title = item.title.toLowerCase();
-  const relPath = item.path.toLowerCase();
-  const excerpt = item.excerpt.toLowerCase();
+  const title = String(item.title || '').toLowerCase();
+  const relPath = String(item.path || '').toLowerCase();
+  const excerpt = String(item.excerpt || '').toLowerCase();
+  const searchable = String(item.searchable || '').toLowerCase();
 
   if (title.includes(query)) score += 120;
   if (relPath.includes(query)) score += 100;
@@ -205,7 +131,7 @@ function scoreItem(item, query, terms, scopeFilter) {
     if (title.includes(term)) score += 30;
     if (relPath.includes(term)) score += 25;
     if (excerpt.includes(term)) score += 8;
-    if (item.searchable.includes(term)) score += 4;
+    if (searchable.includes(term)) score += 4;
   }
 
   return score;
@@ -226,8 +152,27 @@ export async function searchLore(query, scopeFilter, limit = 5) {
       score: scoreItem(item, normalizedQuery, terms, scopeFilter),
     }))
     .filter((item) => item.score > 0)
-    .sort((a, b) => b.score - a.score || a.path.localeCompare(b.path, 'zh-Hant'))
+    .sort((a, b) => b.score - a.score || String(a.path || '').localeCompare(String(b.path || ''), 'zh-Hant'))
     .slice(0, Math.max(1, Math.min(limit, 10)))
-    .map(({ searchable, score, ...item }) => item);
+    .map(({ score, searchable, ...item }) => item);
 }
 
+export async function readDocumentByPath(inputPath) {
+  const safePath = sanitizePath(inputPath);
+  if (!safePath) {
+    return null;
+  }
+
+  const content = await fetchText(`${RAW_REPO_BASE}${safePath}`);
+
+  return {
+    id: safePath.replace(/[\\/]/g, '__').replace(/\.[^.]+$/, ''),
+    path: safePath,
+    scope: resolveScope(safePath),
+    title: extractTitle(content, safePath),
+    excerpt: extractExcerpt(content),
+    headings: extractHeadings(content),
+    content,
+    wordCount: normalizeText(content).split(/\s+/).filter(Boolean).length,
+  };
+}
