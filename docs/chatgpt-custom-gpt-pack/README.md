@@ -17,6 +17,8 @@
    - `07-combat-monsters-and-encounters.md`
    - `08-quests-reputation-and-licenses.md`
    - `09-campaign-continuity-and-ai-flow.md`
+   - `12-retrieval-discipline-and-canon-answering.md`
+   - `13-known-canon-pitfalls-and-frequent-misreads.md`
 4. Capabilities 建議：
    - `Web Search`：先關掉
    - `Code Interpreter / Data Analysis`：可開
@@ -27,7 +29,6 @@
 
 先看這兩份：
 
-- [新手一步一步設定指南](/C:/Users/rabbi/Desktop/Elaris/docs/chatgpt-custom-gpt-pack\11-beginner-step-by-step-setup-guide.md)
 - [新手一步一步設定指南](/C:/Users/rabbi/Desktop/Elaris/docs/chatgpt-custom-gpt-pack/11-beginner-step-by-step-setup-guide.md)
 - [Actions 設定清單](/C:/Users/rabbi/Desktop/Elaris/docs/chatgpt-custom-gpt-pack/10-actions-setup-checklist.md)
 
@@ -42,6 +43,8 @@
 - `03-start-regions-and-openings.md`
 - `04-character-creation-and-jobs.md`
 - `08-quests-reputation-and-licenses.md`
+- `12-retrieval-discipline-and-canon-answering.md`
+- `13-known-canon-pitfalls-and-frequent-misreads.md`
 
 ## 這包的定位
 - 給 `自訂 GPT` 當遊玩核心知識
