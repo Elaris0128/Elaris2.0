@@ -3,10 +3,10 @@
   "version": 2,
   "functions": {
     "api/fetch.js": {
-      "includeFiles": "{content/**/*,docs/chatgpt-custom-gpt-pack/**/*}"
+      "includeFiles": "content/**/*"
     },
-    "api/lore/*.js": {
-      "includeFiles": "{content/**/*,docs/chatgpt-custom-gpt-pack/**/*}"
+    "api/lore/**/*.js": {
+      "includeFiles": "content/**/*"
     }
   }
 }
