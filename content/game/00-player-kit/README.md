@@ -6,18 +6,37 @@
 1. 選 `種族卡`
 2. 如果該種族有正式分支，再選 `分支卡`
 3. 套用 `種族能力卡` 與 `分支能力卡`
-4. 選 `職業卡`
-5. 選 `特質 / 缺陷 / 背景`
-6. 選 `起始裝備包 / 起始資源包`
-7. 選 `起始戰技 / 術式`
-8. 依 `起始區域規則` 落到對應地區
-9. 由 AI 在該地區內隨機組開局
+4. 決定 `白身狀態` 與 `想往哪種生活長`
+5. 選 `職業方向卡`（預設代表成長方向，不一定是已完整轉正）
+6. 選 `特質 / 缺陷 / 背景`
+7. 選 `起始裝備包 / 起始資源包`
+8. 選 `起始戰技 / 術式`
+9. 依 `起始區域規則` 落到對應地區
+10. 由 AI 在該地區內隨機組開局
+
+## 推薦預設：白身開局
+Elaris 最適合的起步方式，不是把角色一開始就寫成成熟職業者，
+而是：
+- 白身
+- 見習
+- 跟行者
+- 候補
+- 短工
+
+職業卡在這種模式下，代表：
+- 你最想靠近哪種生活
+- 你已經摸到哪條路的邊
+- 你前幾章最可能長成什麼
+
+詳細看：
+- [玩家白身開局與後定職模式](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-blank-slate-opening-mode.md)
 
 ## 主要入口
 - [玩家快速上手指南](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-quickstart-guide.md)
 - [玩家一頁速查表](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-one-page-reference.md)
 - [新玩家開局清單](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/new-player-start-checklist.md)
 - [第一場前準備清單](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/first-session-prep-checklist.md)
+- [玩家白身開局與後定職模式](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-blank-slate-opening-mode.md)
 - [玩家種族與分支怎麼選](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-race-and-branch-selection-guide.md)
 - [玩家種族卡庫](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-race-card-library.md)
 - [玩家分支清單](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-race-branch-library.md)
@@ -67,6 +86,7 @@
 ## 這一層回答什麼
 - 玩家開局前最少要選哪些東西
 - 哪些種族需要再細選分支
+- 白身開局時職業卡應該怎麼理解
 - 選完種族後會落在哪裡開始
 - AI 怎麼在該地區內隨機組第一批事件與委託
 - 新玩家怎麼快速理解第一章通常會怎麼展開

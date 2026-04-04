@@ -6,27 +6,51 @@
 - 再保留隨機性
 - 最後長出該地區的味道與第一批可接內容
 
+## 預設開局理念
+Elaris 的預設開局是：
+`玩家先是白身、見習、跟行者、短工或候補，之後才慢慢被世界命名成真正的職業者。`
+
+所以 AI 開局時要優先想：
+- 玩家現在靠誰吃飯
+- 玩家現在被誰帶著跑
+- 玩家最先被丟進哪種地方麻煩
+- 世界會先把玩家當成哪一類「可用的人」
+
+而不是：
+- 玩家一開場就拿完整職權
+- 玩家一開始就能代表某個體系獨立承責
+
 ## 開局核心原則
 1. 先決定 `玩家在哪裡醒來或出現`
-2. 再決定 `第一個立刻要處理的壓力`
-3. 再決定 `第一批可以互動的人、地點、委託`
-4. 最後才補 `尾鉤與下一步`
+2. 再決定 `玩家現在的白身狀態`
+3. 再決定 `第一個立刻要處理的壓力`
+4. 再決定 `第一批可以互動的人、地點、委託`
+5. 最後才補 `尾鉤與下一步`
 
 ## 正式流程
 1. 讀玩家的 `種族 / 分支`
 2. 查 [玩家起始區域與開局包對照表](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-start-region-and-opening-pack-matrix.md)
-3. 確認該區是 `A1 / A2 / A3` 哪一種來源
-4. 讀對應的 [玩家地區專屬開局包](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/regional-opening-pack-library.md) 與 [AI 地區專屬開局包](C:/Users/rabbi/Desktop/Elaris/content/game/12-ai-play/regional-opening-pack-library.md)
-5. 若該區有既有任務池，就依 [AI 開局任務抽取指南](C:/Users/rabbi/Desktop/Elaris/content/game/12-ai-play/ai-opening-quest-draw-guide.md) 優先抽既有任務
-6. 再用本框架組第一幕
+3. 確認玩家的 `白身狀態` 與 `想靠近的生活方向`
+4. 確認該區是 `A1 / A2 / A3` 哪一種來源
+5. 讀對應的 [玩家地區專屬開局包](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/regional-opening-pack-library.md) 與 [AI 地區專屬開局包](C:/Users/rabbi/Desktop/Elaris/content/game/12-ai-play/regional-opening-pack-library.md)
+6. 若該區有既有任務池，就依 [AI 開局任務抽取指南](C:/Users/rabbi/Desktop/Elaris/content/game/12-ai-play/ai-opening-quest-draw-guide.md) 優先抽既有任務
+7. 再用本框架組第一幕
 
 ## A 級來源判法
 - `A1`：直接抽既有獨立任務檔
 - `A2`：直接讀地區 starter / questline / region pack
 - `A3`：直接用地區開局模板組合，不另抽獨立任務檔
 
-## 每次開局一定要組出的五塊
+## 白身狀態建議庫
+- 家傳幫手：已接觸工作，但不能獨立承責
+- 見習 / 學徒：有師承，但沒轉正
+- 跟行者：跟著船、隊伍、哨線或商路跑
+- 短工 / 臨工：先靠零工活著
+- 候補 / 未受印：已被制度看見，但還沒通過門檻
+
+## 每次開局一定要組出的六塊
 - 起始落點：玩家人在哪裡
+- 白身狀態：玩家現在被世界怎麼看
 - 立即壓力：眼前不處理就會變糟的事
 - 第一目標：玩家很快能理解的短期目標
 - 第一批互動點：人、地點、委託、證據
@@ -39,9 +63,11 @@
 - 時間壓力：潮窗要關、船要開、證物要壞、天氣要變
 - 灰線壓力：黑市摻手、貨物不乾淨、有人想抹名
 - 異變壓力：錯燈、病潮、污染、低語、異樣徵兆
+- 身份壓力：你其實只是見習、短工、暫代，還沒有完整資格
 
 ## 第一幕最安全的組法
 - `1` 個起始落點
+- `1` 個白身狀態
 - `1` 個立即壓力
 - `2` 個互動點
 - `1` 個可接任務
@@ -51,36 +77,44 @@
 - 不要第一幕就同時丟 `首領戰 + 大異變 + 多勢力會談`
 - 不要在玩家還不懂地區時，先塞三條以上長線
 - 不要讓第一個難點完全不對應角色能力
+- 不要在第一幕就把玩家升成完整成熟職人
 
 ## 常見地區開局偏好
 ### 幽語海
 - 適合：低聲異變、港邊失蹤、潮路問題、守路委託
 - 第一壓力常見：錯潮、潮窟病、失路、低聲壞兆
+- 白身切入常見：借路學徒、岬哨跟行、潮療跑腿
 
 ### 焰潮洋
 - 適合：海盜、海人守域、危材、熱潮補給
 - 第一壓力常見：貨不乾淨、暗泊衝突、熱潮窗口、巡守阻攔
+- 白身切入常見：熱潮短工、危材助手、守域圈外跑腿
 
 ### 暮鏡荒境
 - 適合：寒境生存、部族誓約、狩獵、邊境守望
 - 第一壓力常見：雪夜、獸群、獵路衝突、守界問題
+- 白身切入常見：營火雜務、狩路跟行、守夜候補
 
 ### 王都都市圈
 - 適合：查案、執照、社交、議價、階層衝突
 - 第一壓力常見：通行卡關、委託競標、名譽問題、證物糾紛
+- 白身切入常見：書記跑腿、低階助手、窗口暫代
 
 ### 港邊航務圈
 - 適合：航權、泊位、運輸、救援、灰線查驗
 - 第一壓力常見：泊位不足、貨損、查驗、船班時間壓力
+- 白身切入常見：搬貨短工、引水跟行、驗貨助手
 
 ## AI 輸出時的最短模板
 - 你現在在：`起始落點`
+- 你現在的身份：`白身狀態`
 - 你立刻碰上：`立即壓力`
 - 你可以先接觸：`2 個互動點`
 - 你現在最清楚的短目標：`第一目標`
 - 如果拖延，會發生：`第一個麻煩`
 
 ## 搭配使用
+- [玩家白身開局與後定職模式](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-blank-slate-opening-mode.md)
 - [Opening Flow](C:/Users/rabbi/Desktop/Elaris/content/game/12-ai-play/opening-flow.md)
 - [玩家開局組裝工具](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-opening-construction-kit.md)
 - [玩家開局模板庫](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-opening-template-library.md)
