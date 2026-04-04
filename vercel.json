@@ -1,15 +1,4 @@
 ﻿{
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "version": 2,
-  "functions": {
-    "api/fetch.js": {
-      "includeFiles": "content/**/*"
-    },
-    "api/lore/search.js": {
-      "includeFiles": "content/**/*"
-    },
-    "api/lore/document.js": {
-      "includeFiles": "content/**/*"
-    }
-  }
+  "version": 2
 }
