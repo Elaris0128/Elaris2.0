@@ -8,18 +8,18 @@
 2. 在 `Instructions` 貼上：
    - `00-custom-gpt-instructions-template.md`
 3. 在 `Knowledge` 上傳：
-   - `01-canon-priority-and-play-mode.md`
-   - `02-playable-races-and-branches.md`
-   - `03-start-regions-and-openings.md`
+   - `01-world-canon-priority-and-play-mode.md`
+   - `02-world-playable-races-and-official-branches.md`
+   - `03-world-start-regions-and-openings.md`
    - `04-character-creation-and-jobs.md`
-   - `05-core-play-and-adjudication.md`
+   - `05-world-core-play-and-adjudication.md`
    - `06-items-inventory-and-crafting.md`
    - `07-combat-monsters-and-encounters.md`
    - `08-quests-reputation-and-licenses.md`
    - `09-campaign-continuity-and-ai-flow.md`
-   - `12-retrieval-discipline-and-canon-answering.md`
-   - `13-known-canon-pitfalls-and-frequent-misreads.md`
-   - `14-vanlote-continent-and-peoples.md`
+   - `12-world-retrieval-discipline-and-canon-answering.md`
+   - `13-world-known-canon-pitfalls-and-frequent-misreads.md`
+   - `14-world-overview-and-major-cultural-regions.md`
 4. Capabilities 建議：
    - `Web Search`：先關掉
    - `Code Interpreter / Data Analysis`：可開
@@ -28,8 +28,8 @@
 
 ## 如果你想照著一步一步做
 先看這兩份：
-- [新手一步一步設定指南](C:/Users/rabbi/Desktop/Elaris/docs/chatgpt-custom-gpt-pack/11-beginner-step-by-step-setup-guide.md)
-- [Actions 設定清單](C:/Users/rabbi/Desktop/Elaris/docs/chatgpt-custom-gpt-pack/10-actions-setup-checklist.md)
+- `11-beginner-step-by-step-setup-guide.md`
+- `10-actions-setup-checklist.md`
 
 ## 為什麼這樣拆
 - `Instructions` 放行為與裁定規則
@@ -37,15 +37,15 @@
 - `12 / 13 / 14` 專門補：
   - 正典查證紀律
   - 常見誤判
-  - 梵洛特與獸人支系容易漏掉的資料
+  - 世界總覽與主要文化圈
 
 ## 如果之後要更新
 最優先重傳的通常是：
-- `02-playable-races-and-branches.md`
-- `03-start-regions-and-openings.md`
-- `12-retrieval-discipline-and-canon-answering.md`
-- `13-known-canon-pitfalls-and-frequent-misreads.md`
-- `14-vanlote-continent-and-peoples.md`
+- `02-world-playable-races-and-official-branches.md`
+- `03-world-start-regions-and-openings.md`
+- `12-world-retrieval-discipline-and-canon-answering.md`
+- `13-world-known-canon-pitfalls-and-frequent-misreads.md`
+- `14-world-overview-and-major-cultural-regions.md`
 
 ## 這包的定位
 - 給 `自訂 GPT` 當遊玩核心知識
