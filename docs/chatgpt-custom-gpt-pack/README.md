@@ -19,32 +19,33 @@
    - `09-campaign-continuity-and-ai-flow.md`
    - `12-retrieval-discipline-and-canon-answering.md`
    - `13-known-canon-pitfalls-and-frequent-misreads.md`
+   - `14-vanlote-continent-and-peoples.md`
 4. Capabilities 建議：
    - `Web Search`：先關掉
    - `Code Interpreter / Data Analysis`：可開
    - `Image`：可選
-   - `Actions`：第一版先不要
+   - `Actions`：建議開，讓 GPT 可先查 Elaris lore API 再回答
 
 ## 如果你想照著一步一步做
-
 先看這兩份：
-
-- [新手一步一步設定指南](/C:/Users/rabbi/Desktop/Elaris/docs/chatgpt-custom-gpt-pack/11-beginner-step-by-step-setup-guide.md)
-- [Actions 設定清單](/C:/Users/rabbi/Desktop/Elaris/docs/chatgpt-custom-gpt-pack/10-actions-setup-checklist.md)
+- [新手一步一步設定指南](C:/Users/rabbi/Desktop/Elaris/docs/chatgpt-custom-gpt-pack/11-beginner-step-by-step-setup-guide.md)
+- [Actions 設定清單](C:/Users/rabbi/Desktop/Elaris/docs/chatgpt-custom-gpt-pack/10-actions-setup-checklist.md)
 
 ## 為什麼這樣拆
 - `Instructions` 放行為與裁定規則
 - `Knowledge` 放世界觀與玩家規則摘要
-- 這樣比較符合自訂 GPT 的讀法，也比較不會把整個專案丟進去之後反而抓不到重點
+- `12 / 13 / 14` 專門補：
+  - 正典查證紀律
+  - 常見誤判
+  - 梵洛特與獸人支系容易漏掉的資料
 
 ## 如果之後要更新
 最優先重傳的通常是：
 - `02-playable-races-and-branches.md`
 - `03-start-regions-and-openings.md`
-- `04-character-creation-and-jobs.md`
-- `08-quests-reputation-and-licenses.md`
 - `12-retrieval-discipline-and-canon-answering.md`
 - `13-known-canon-pitfalls-and-frequent-misreads.md`
+- `14-vanlote-continent-and-peoples.md`
 
 ## 這包的定位
 - 給 `自訂 GPT` 當遊玩核心知識
