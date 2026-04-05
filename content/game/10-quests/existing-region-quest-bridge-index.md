@@ -120,7 +120,7 @@ AI 使用方式：
 | --- | --- |
 | 港邊航務圈 | 港務、商會、航權、失蹤、查驗衝突模板 |
 | 法雷恩沿海諸港 | 沿海港埠、人情債、貨務、海航事故模板 |
-| 梵洛特霧林換徑與水路券流圈 | `jianying-yinlin`、`lormeer`、`perlin`、`xingwen-road` |
+| 梵洛特霧林谷寨與曲水換徑圈 | `jianying-yinlin`、`lormeer`、`perlin`、`xingwen-road` |
 | 萬嶺幽陵山陵圈 | 山陵採收、家族糾紛、護送、祖物模板 |
 | 多數獸人邊支地 | 氏族遷徙、獵窗、祭期、守域衝突模板 |
 | 森馳裔邊林圈 | 林路、遠遞、守林、幽徑事故模板 |
@@ -141,3 +141,4 @@ AI 使用方式：
 - [開局任務推薦矩陣](C:/Users/rabbi/Desktop/Elaris/content/game/10-quests/player-opening-quest-recommendation-matrix.md)
 - [玩家起始區域與開局包對照表](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/player-start-region-and-opening-pack-matrix.md)
 - [AI 開局任務抽取指南](C:/Users/rabbi/Desktop/Elaris/content/game/12-ai-play/ai-opening-quest-draw-guide.md)
+

@@ -1,26 +1,21 @@
-# 地區編年史索引
+﻿# 地區編年史索引
 
-## 內容定位
-這裡整理的是大陸、特殊區域與六大洋的重大事件主線。
+## 定位
+這裡收的是 `大區尺度` 的編年史，也就是三大陸、六大洋與特殊區域如何走出自己的歷史節奏。
 
-讀法建議：
-- 先看 [世界重大事件總時間軸](/C:/Users/rabbi/Desktop/Elaris/content/world/10-timeline/world-major-events-race-region-matrix.md) 掌握各地區在世界七大時代中的位置。
-- 再看各地區主編年史。
-- 最後回到各國版、特殊區域與海域設定檔讀細節。
+## 入口
+- [賽勒亞編年史](./seleria-chronicle.md)
+- [梵洛特編年史](./vanlote-chronicle.md)
+- [伊莎梅爾編年史](./isamel-chronicle.md)
+- [特殊區域編年史](./special-regions-chronicle.md)
+- [六大洋編年史](./six-oceans-chronicle.md)
 
-## 地區主線
-- [賽勒亞編年史](/C:/Users/rabbi/Desktop/Elaris/content/world/10-timeline/regions/seleria-chronicle.md)
-- [梵洛特編年史](/C:/Users/rabbi/Desktop/Elaris/content/world/10-timeline/regions/vanlote-chronicle.md)
-- [伊莎梅爾編年史](/C:/Users/rabbi/Desktop/Elaris/content/world/10-timeline/regions/isamel-chronicle.md)
-- [特殊區域編年史](/C:/Users/rabbi/Desktop/Elaris/content/world/10-timeline/regions/special-regions-chronicle.md)
-- [六大洋編年史](/C:/Users/rabbi/Desktop/Elaris/content/world/10-timeline/regions/six-oceans-chronicle.md)
+## 讀法
+- 地區編年史看的是 `大區主線`，不是單一國家的詳細年表。
+- 若你要查地方曆、王室更替、地方政爭，請再往各國編年史走。
+- 若你要查種族自己的長時間尺度，請改看種族編年史。
 
-## 對照方式
-- 上古大時代：`神行世 / 聖跡世`
-- 現代跨區域：`通行曆`
-- 國別細節：回到 [各國編年史索引](/C:/Users/rabbi/Desktop/Elaris/content/world/10-timeline/countries/README.md) 對照地方曆
-
-## 延伸入口
-- [世界總編年史](/C:/Users/rabbi/Desktop/Elaris/content/world/10-timeline/world-chronicle.md)
-- [世界重大事件總時間軸](/C:/Users/rabbi/Desktop/Elaris/content/world/10-timeline/world-major-events-race-region-matrix.md)
-- [各國編年史索引](/C:/Users/rabbi/Desktop/Elaris/content/world/10-timeline/countries/README.md)
+## 搭配閱讀
+- [世界總編年史](../world-chronicle.md)
+- [各國編年史索引](../countries/README.md)
+- [種族編年史索引](../races/README.md)

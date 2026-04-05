@@ -86,7 +86,7 @@ AI 開場時建議直接輸出：
 ### A3 區域
 - 港邊航務圈
 - 法雷恩沿海諸港
-- 梵洛特霧林換徑與水路券流圈
+- 梵洛特霧林谷寨與曲水換徑圈
 - 萬嶺幽陵山陵圈
 - 多數獸人邊支地
 - 森馳裔邊林圈
@@ -114,3 +114,4 @@ AI 開場時建議直接輸出：
 - [既有地區任務橋接索引](C:/Users/rabbi/Desktop/Elaris/content/game/10-quests/existing-region-quest-bridge-index.md)
 - [開局任務推薦矩陣](C:/Users/rabbi/Desktop/Elaris/content/game/10-quests/player-opening-quest-recommendation-matrix.md)
 - [玩家地區專屬開局包](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/regional-opening-pack-library.md)
+

@@ -22,7 +22,7 @@
 | 崖影族 | 萬嶺幽陵山陵圈 | 幽陵山陵圈 | A3 |
 | 巖穹族 | 巖穹三聯域 | 巖穹三聯域包 | A2 |
 | 薩魯恩人 | 梵洛特-裂紋沙原 | 裂紋沙原包 | A2 |
-| 柯沙里人 | 梵洛特-霧林換徑與水路券流圈 | 霧林換徑與水路券流圈包 | A3 |
+| 柯沙里人 | 梵洛特-霧林谷寨與曲水換徑圈 | 霧林谷寨與曲水換徑圈包 | A3 |
 | 諾魯因人 | 幽語海 | 幽語海包 | A1 |
 
 ## 翼人、矮人、地精、森馳裔
@@ -120,3 +120,4 @@
 - [玩家地區專屬開局包](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/regional-opening-pack-library.md)
 - [開局任務推薦矩陣](C:/Users/rabbi/Desktop/Elaris/content/game/10-quests/player-opening-quest-recommendation-matrix.md)
 - [AI 開局任務抽取指南](C:/Users/rabbi/Desktop/Elaris/content/game/12-ai-play/ai-opening-quest-draw-guide.md)
+

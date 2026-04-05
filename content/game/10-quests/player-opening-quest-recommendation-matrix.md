@@ -56,7 +56,7 @@
 | --- | --- |
 | 港邊航務圈 | `1 委託 + 1 港務衝突 + 1 地方麻煩` |
 | 法雷恩沿海諸港 | `1 港邊委託 + 1 海上事故 + 1 人情債` |
-| 梵洛特霧林換徑與水路券流圈 | `1 換徑或港務委託 + 1 失聯線索 + 1 查驗/契約壓力` |
+| 梵洛特霧林谷寨與曲水換徑圈 | `1 換徑或港務委託 + 1 失聯線索 + 1 查驗/契約壓力` |
 | 萬嶺幽陵山陵圈 | `1 採收/護送委託 + 1 家族糾紛 + 1 祖物問題` |
 | 多數獸人邊支地 | `1 氏族任務 + 1 獵窗壓力 + 1 外來干擾` |
 | 森馳裔邊林圈 | `1 林路護送 + 1 邊林事故 + 1 守林選擇` |
@@ -89,3 +89,4 @@
 - [既有地區任務橋接索引](C:/Users/rabbi/Desktop/Elaris/content/game/10-quests/existing-region-quest-bridge-index.md)
 - [AI 開局任務抽取指南](C:/Users/rabbi/Desktop/Elaris/content/game/12-ai-play/ai-opening-quest-draw-guide.md)
 - [玩家地區專屬開局包](C:/Users/rabbi/Desktop/Elaris/content/game/00-player-kit/regional-opening-pack-library.md)
+
